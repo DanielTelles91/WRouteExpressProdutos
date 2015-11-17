@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Autentica Usuario Route Express</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!--css bootstrap-->
+        <link rel="stylesheet" href="css/loginusuario.css" type="text/css" />
+        <!--css login.html-->
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script><!--js jquery-->
+        <script src="js/plugins/jquery.maskedinput.min.js" type="text/javascript"></script><!--js plugin maskedinput-->
+        <script src="js/bootstrap.min.js" type="text/javascript"></script><!--js bootstrap-->
+        <script src="js/loginusuario.js" type="text/javascript"></script><!--js bootstrap-->  
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".route-express")
+                        .css("font-size", "30px")
+                        .hide()
+                        .delay('1000')
+                        .fadeIn("slow");
+
+                $('.barra-de-notificacao').css({backgroundColor: '#F5F5F5', marginTop: '35px'});
+                $('.link-home').css({textDecoration: 'none', color: 'black', fontSize: '20px'});
+                $('.icone, notificacao').css({fontSize: '25px', display: 'inline'});
+                $('.ativo').css('backgroundColor', 'white');
+
+                $("#recovery-cpf").mask("999.999.999.-99");
+            });
+        </script>
+
+
+    </head>
+    <body>
+        <section id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row barra-de-notificacao">
+                            <div class="col-xs-4">
+                                <a href="ServletListarProdutos?acao=listar" class="link-home">ROUTE EXPRESS BEER</a>
+                            </div>
+                            <div class="col-xs-8">
+                                <div class="col-xs-6 col-sm-3">
+                                    <span class="glyphicon glyphicon-shopping-cart icone"></span><p class="notificacao">Carrinho</p>
+                                </div>
+                                <div class="col-xs-6 col-sm-3 ativo">
+                                    <span class="glyphicon glyphicon-user icone"></span><p class="notificacao">Autenticação</p>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <span class="glyphicon glyphicon-th icone"></span><p class="notificacao">Confirmação</p>
+                                </div>
+                                <div class="col-xs-6 col-sm-3">
+                                    <span class="glyphicon glyphicon-ok icone"></span><p class="notificacao">Pedido</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                        <h1 class="route-express">ROUTE-EXPRESS</h1>
+                        <h1>FAÇA SEU LOGIN NA ROUTE-EXPRESS</h1>
+
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+                            <li><a href="#Registration" data-toggle="tab">Cadastro</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="Login">
+                                <form role="form" class="form-horizontal" action ="LoginServlet" method="post" id="login-form" autocomplete="off">
+                                    <div class="form-group">
+                                        <label for="mobile" class="col-sm-1 control-label">
+                                            E-mail</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" name="email" id="email" class="form-control" placeholder="henriquefr@example.com" required autofocus>   
+                                        </div>
+                                    </div>                           
+                                    <div class="form-group">
+                                        <label for="mobile" class="col-sm-1 control-label">
+                                            Senha</label>
+                                        <div class="col-sm-10">
+                                            <input type="password" name="key" id="key" class="form-control" placeholder="Senha" maxlength="10" required>  
+                                        </div>
+                                    </div>
+                                    <div class="checkbox">
+                                        <span class="character-checkbox" onclick="showPassword()"></span>
+                                        <span class="label">Mostrar caracteres</span>
+                                    </div>
+                                    <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Entrar">
+                                </form>
+                                <a href="#" class="forget" data-toggle="modal" data-target=".forget-modal">Esqueci a minha senha!</a>
+
+                            </div>
+                            <div class="tab-pane" id="Registration">
+                                <form role="form" class="form-horizontal"  action="LoginUsuario" method="post" id="login-form2" autocomplete="off">
+                                    <div class="form-group">
+
+                                        <label for="mobile" class="col-sm-1 control-label">
+                                            CPF:</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" name="recovery-cpf" id="recovery-cpf" class="form-control" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <input type="submit" id="btn-login2" class="btn btn-custom btn-lg btn-block" value="Enviar">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title">Identifique-se</h4>
+                    </div>
+                    <form role="form" action="LoginUsuario" method="post" id="login-form2" autocomplete="off">
+                        <div class="modal-body">
+                            <p>Digite seu CPF:</p>
+                            <input type="text" name="recovery-cpf" id="recovery-cpf" class="form-control" autocomplete="off">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            <input type="submit" id="btn-login2" class="btn btn-custom" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Route Express © - 2015</p>
+                        <p>Powered by Route Express Group </p>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
