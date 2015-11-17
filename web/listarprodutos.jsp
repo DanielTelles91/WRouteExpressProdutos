@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- Optional theme -->
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/footer.css">
         <!-- jQuery lib -->		
         <script type="text/javascript" src="js/jquery.min.js"></script>
 
@@ -531,6 +532,41 @@
                 </div>
             </div>
         </div>
+        
+        <footer style="background-color: #000000">
+              <div class=" menuopcoes">
+                <a href="errorpage.jsp">| Tela inicial</a>
+                <a href="LoginSuccess.jsp">|Meus Pedidos</a>
+                <a href="errorpage.jsp">|Carrinho|</a>
+
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12" style="text-align: center">
+                        <p >RouteExpress © - 2015</p>
+                        <p>Powered by <strong><a href="#" target="_blank">Route Express Solutions</a></strong></p>
+                        <img class="img-thumbnail imgfoot" src="img/thumbs/cartoes.png">
+                        <img class="img-thumbnail imgfoot" src="img/thumbs/barradecodigo.jpg">
+                    </div>
+
+                    <div class="container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                       
+
+                    </div>
+                    <div id="coluna">
+                        <label>Contatos</label><p>São Paulo : 4002-8922</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+          
+         </footer>
+  
+        
     </body>
 </html>
 
