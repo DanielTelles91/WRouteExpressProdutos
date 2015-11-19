@@ -1,0 +1,34 @@
+.menuopcoes{
+
+    background-color: #6d6d6d;
+    text-align: right;
+    font-size: x-large;
+    font-style:normal;
+    color: #ffffff;
+
+}
+/**/
+
+.imgfoot{
+    height: 50px;
+
+
+
+}
+footer p{
+    
+    color: #ffffff;
+    
+}
+footer label{
+    
+    color: #ffffff;
+    
+}
+
+footer{
+
+    display: block;
+    font-size: 15px;
+    font:sans-serif;
+}
