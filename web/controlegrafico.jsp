@@ -76,42 +76,35 @@
                 chart.draw(data, options);
             }
         </script>
-
     </head>
     <body>
-        <div class="container">
-            <!--Comeco da linha-->
-            <div class="row">
-                <!--Comeco do breadcrumb-->
-                <div class="col-xs-8">
-                    <ul class="breadcrumb">
-                        <li>
-                            <a href="home.jsp">Home</a>
-                        </li>
-                        <li>
-                            <a href="CarregaControleProduto?acao=carregacontroleproduto">Controle de Produto</a>
-                        </li>
-                        <li>
-                            <a href="ControleEntradaEstoque">Relatorio estoque</a>
-                        </li>
-                        <li class="active">Relatorio estoque</li>
-                    </ul>
-                    <!--Fim do breadcrumb-->
-                </div>
-                <div class="col-xs-1 col-xs-offset-1">
-                    <p class="lead">
-                        Operador(a) 
-                        <c:out value="${sessionScope.usuario.nome}" />
-                    </p>
-                </div>
-                <!--Comeco do botao sair-->
-                <div class="col-xs-1 col-xs-offset-1">
-                    <a class="btn btn-warning" href="LoginUsuario" role="button">Sair</a>
-                    <!--Fim do botao sair-->
-                </div>
-                <!--Fim da linha-->
+        <div class="section">
+      <div class="container">
+        <!--Comeco da linha-->
+        <div class="row">
+          <!--Comeco do breadcrumb-->
+          <div class="col-xs-8">
+            <ul class="breadcrumb">
+              <li>
+                <a href="home.jsp">Home</a>
+              </li>
+              <li>
+                <a href="controlegrafico.jsp">Controle de Grafico</a>
+              </li>
+              <li class="active">Controle de Grafico</li>
+            </ul>
+            <!--Fim do breadcrumb-->
+          </div>
+          <div class="col-xs-1 col-xs-offset-1">
+                <p class="lead">Operador(a) <c:out value="${sessionScope.usuario.nome}" /></p>
             </div>
-            <div class="demo">
+          <!--Comeco do botao sair-->
+          <div class="col-xs-1 col-xs-offset-1">
+            <a class="btn btn-warning" href="LoginUsuario" role="button">Sair</a>
+            <!--Fim do botao sair-->
+          </div>
+          </br>
+          <div class="demo">
                 <form action="#">
                     <fieldset>
                         <label for="number">Escolha um ano</label>
@@ -135,14 +128,9 @@
                             <option>2016</option>
                         </select>
                     </fieldset>
-
                 </form>
-
             </div>
-
-
-        </div>
-        <div class="col-ms-12">
+          <div class="col-ms-12">
             <div class="form-group col-xs-0 col-sm-8">
             </div>
             <div class="form-group col-xs-5 col-sm-2">
@@ -154,9 +142,10 @@
         </div>
         </br>
         </br>
-        <div id="chart_div" style="width: 1200px; height: 700px;"></div>
-    </form>
-    
-    
-</body>
+           <div id="chart_div" style="width: 1200px; height: 700px;">
+         </div>
+        </div>
+      </div>
+    </div>
+    </body>
 </html>
